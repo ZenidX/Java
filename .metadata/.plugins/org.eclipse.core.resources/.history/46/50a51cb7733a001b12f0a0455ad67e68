@@ -1,0 +1,44 @@
+//IMPLEMENTACIÓ DE L'EXERCICI PROPOSAT QUE CONVERTEIX METRES EN CM.
+
+import java.awt.*;                                                        
+import java.awt.event.*;                                                  
+class ExempleGraficConversor extends Frame implements ActionListener {      
+	Button b1=new Button("->");
+	Button b2=new Button("<-");                       
+	TextField t_metres=new TextField(20),t_cm=new TextField(20);          
+	                                                                      
+	public static void main(String[] args) {                              
+		new ExempleGraficConversor();		//  metres -> <-  cm                  
+	}                                                                     
+	ExempleGraficConversor() {                                                     
+		super("Finestra");                                                
+		setLayout(new FlowLayout());                                      
+		                                                                  
+		add(t_metres);                                                    
+		add(b1);b1.addActionListener(this);                               
+		add(b2);b2.addActionListener(this);                               
+		add(t_cm);                                                        
+		                                                                  
+		setSize(600, 300);                                                
+		setVisible(true);                                                 
+	}                                                                     
+	public void actionPerformed(ActionEvent e) {                          
+		if (e.getSource()==b1) {                                          
+//			String m=t_metres.getText();                                  
+//			double d=Double.parseDouble(m);                               
+//			d*=100;  //equival a d=d*100                                  
+			//m=d+"";//    Double.toString(d);                            
+			t_cm.setText((Double.parseDouble(t_metres.getText())*100)+"");
+		}                                                                 
+		if (e.getSource()==b2) {                                          
+			String m=t_cm.getText();                                      
+			double d=Double.parseDouble(m);                               
+			d/=100;                                                       
+			m=Double.toString(d);                                         
+			t_metres.setText(m);                                          
+		}                                                                 
+		                                                                  
+	}                                                                     
+	                                                                      
+                                                                          
+}  

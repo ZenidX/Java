@@ -1,0 +1,8 @@
+import java.io.*;
+class Exemple{
+	public static void main(String argv[]) throws Exception{
+		DataInputStream dis=new DataInputStream(System.in);
+		String s=dis.readLine();
+		System.out.print("Dices <"+s+">");
+	}
+}

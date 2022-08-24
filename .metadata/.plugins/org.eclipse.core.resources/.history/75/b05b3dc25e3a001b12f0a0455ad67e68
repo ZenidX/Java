@@ -1,0 +1,31 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class ExempleGrafic implements ActionListener{
+	Button b,b2;
+	public static void main(String[] args) {
+		new ExempleGrafic();
+	}
+	ExempleGrafic() {
+		Frame f=new Frame("ME CAGO EN TO LO CAGABLE");
+		f.setLayout(new FlowLayout());
+		
+		b=new Button("Mujer");
+		f.add(b);b.addActionListener(this);
+		b2=new Button("Hombre");
+		f.add(b2);b2.addActionListener(this);
+		
+		f.setSize(300, 300);
+		f.setVisible(true);
+	}
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource()==b) {	//Object==Button
+			System.out.println("Mujer oprimida");
+		}
+		if (e.getSource()==b2) {
+			System.out.println("Hombre oprimido");
+		}
+		
+	}
+
+}

@@ -1,0 +1,20 @@
+import java.io.*;
+class Exemple{
+	public static void main(String argv[]) throws Exception{
+		DataInputStream dis=new DataInputStream(System.in);
+		String s=dis.readLine();
+		System.out.println("Has escrito: "+s);
+	}
+}
+
+
+/*	
+
+
+public static void main(String argv[]){
+int v[]=new int[50];
+for(int i=0;i<v.length;i++){
+	v[i]=i;
+}
+System.out.println("Tu edad es "+v[43]);
+}

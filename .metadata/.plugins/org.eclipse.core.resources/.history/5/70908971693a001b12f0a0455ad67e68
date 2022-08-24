@@ -1,0 +1,39 @@
+import java.awt.*;
+import java.awt.event.*;
+public class ExempleGrafic extends Frame implements ActionListener{
+	Button b,b2;
+	TextField t,t2;
+	public static void main(String[] args) {
+		new ExempleGrafic();
+	}
+	ExempleGrafic() {
+		super("Finestra");
+		//Frame f=new Frame("Finestra");
+		setLayout(new FlowLayout());
+		
+		t=new TextField(20);
+		add(t);
+		
+		b=new Button("botó");
+		add(b);b.addActionListener(this);
+		b2=new Button("botó2");
+		add(b2);b2.addActionListener(this);
+		
+		t2=new TextField(20);
+		add(t2);
+		
+		setSize(300, 300);
+		setVisible(true);
+	}
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource()==b) {	//Object==Button
+			System.out.println(t.getText());
+			t2.setText(t.getText());
+		}
+		if (e.getSource()==b2) {
+			System.out.println("Botó2 premut");
+		}
+		
+	}
+
+}

@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Xavi\Archivos\Trabajo\Universidad\FE\FullStack Web\Java\.metadata\.plugins\org.eclipse.jdt.core
+3251249088.index
+3577458456.index
+1346343815.index

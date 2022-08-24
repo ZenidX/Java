@@ -1,0 +1,6 @@
+class Exemple{
+	public static void main(String argv[]) {
+		int edad=30;
+		System.out.println("Tu edad es "+edad);
+	}
+}

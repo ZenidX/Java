@@ -1,0 +1,19 @@
+import java.io.*;
+public class exemple {
+	public static void main(String[] args) throws Exception{
+		StreamTokenizer st=new StreamTokenizer(System.in);
+		do{
+			st.nextToken();
+			if(st.ttype==StreamTokenizer.TT_WORD)
+				System.out.println("Palabra leida: "+st.sval);
+			else if(st.ttype==StreamTokenizer.TT_NUMBER)
+				System.out.println("Numero leido: "+st.nval);
+			else System.out.println("ttype="+st.ttype);
+		} while(st.ttype!=StreamTokenizer.TT_EOF);
+		
+		PrintStream p=new Printstream("fout2.txt");
+		p.println("Hola buenas tardes");
+		p.println("De puta madre bro");
+		p.clos();
+	}
+}

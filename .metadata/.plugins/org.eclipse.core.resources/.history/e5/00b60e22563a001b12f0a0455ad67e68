@@ -1,0 +1,14 @@
+import java.io.*;
+public class exemple {
+	public static void main(String argv[]) throws Exception{
+		FileInputStream fis=new FileInputStream("f.txt");
+		DataInputStream dis=new DataInputStream(fis);
+		String s=dis.readLine();
+		System.out.print("Has escrito: "+s);
+		fis.close();
+		FileOutputStream fos=new FileOutputStream("four.txt");
+		DataOutputStream dos=new DataOutputStream(fos);
+		dos.writeBytes("Buenas tardes tengais todos");
+		fos.close();
+	}
+}
