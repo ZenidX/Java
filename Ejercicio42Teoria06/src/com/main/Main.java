@@ -1,14 +1,17 @@
 package com.main;
 
+import java.io.InputStream;
+import java.util.Scanner;
+
 public class Main {
 	public static void main(String[] args){
-		System.out.println("Instrucción 1");
+		InputStream inputStream = System.in;
+		Scanner sc = new Scanner(inputStream);
+		int modo = sc.nextInt();
 		try {
-			String txt="Generando una excepción NullPointer";
-			throw new NullPointerException(txt);
+
 		}catch(Exception e){
-			System.err.println(e);
+			
 		}
-		System.out.println("Intrucción 3");
 	}
 }
