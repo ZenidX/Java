@@ -30,9 +30,9 @@ public class Main {
 				int edad = result.getInt("Edad");
 				System.out.printf("%10d%10s%10d%n", id_usuarios, nombre, edad);
 			}
-			result.close(); // Cerrando resultset
-			statement.close(); // Cerrando statement
-			connection.close(); // Cerrando connection
+			result.close(); 
+			statement.close();
+			connection.close();
 		} catch (Exception e) {
 			System.err.println(e);
 		}
